@@ -41,3 +41,4 @@ yarn.lock
 .vscode/ 
 *.ts
 *.map
+.npmignore
