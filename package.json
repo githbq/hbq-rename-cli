@@ -1,6 +1,6 @@
 {
     "name": "renamex-cli",
-    "version": "0.1.0",
+    "version": "1.0.1",
     "description": "rename cli  一个好用的重命名 命令行工具 默认已经忽略 node_modules文件夹",
     "bin": {
         "renamex": "./build/index.js"
@@ -9,7 +9,7 @@
         "start": "node run",
         "tsc": "tsc",
         "tsc:w": "tsc -w",
-        "publish": "tsc && npm publish"
+        "p": "tsc && npm publish"
     },
     "author": "hubiqing",
     "license": "MIT",
