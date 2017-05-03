@@ -4,7 +4,7 @@ import * as globby from 'globby'
 import * as   ioHelper from 'io-helper'
 import common from './common'
 const { exit, prompt } = common;
- 
+
 function joinArr(arr, prefix) {
     return arr.map((n) => {
         return pathTool.join(prefix, n)
@@ -16,20 +16,20 @@ export default {
      */
     async start(data) {
         console.log(`\n*******replacePattern:${data.replacePattern}*******\n`)
-        const promises = [];
+        const params = [];
+        let count = 0;
         globby([data.pattern], { cwd: common.cwd, dot: true, ignore: ['**/node_modules/**/*'] }).then(async (paths) => {
-
             for (let p of paths) {
-                console.log('路径:', p)
+                console.log(`路径${++count}:`, p)
                 let dirname = pathTool.dirname(p)
                 //与执行命令所在路径拼接
                 dirname = pathTool.join(common.cwd, dirname)
                 let pathData = this.getPathData(p)
                 let newFilename = this.replaceWithData(data.replacePattern, pathData)
-                promises.push(ioHelper.renameAsync(dirname, pathData.full, newFilename))
+                params.push([dirname, pathData.full, newFilename])
             }
         }).then(() => {
-            if (promises.length == 0) {
+            if (params.length == 0) {
                 console.log(`\n ***未匹配到文件*** \n`)
                 return
             }
@@ -43,6 +43,9 @@ export default {
             }).
             then((ok) => {
                 if (ok) {
+                    const promises = params.map(n => {
+                        return ioHelper.renameAsync.apply(null, n)
+                    })
                     console.log(`正在重命名${promises.length}个文件`)
                     return Promise.all(promises)
                 }

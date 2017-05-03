@@ -9,8 +9,7 @@
              "isBuildCommand": true
          },
          {
-             "taskName": "tsc",
-             "isBuildCommand": true
+             "taskName": "tsc"
          }
      ]
  }

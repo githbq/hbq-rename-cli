@@ -3,7 +3,7 @@
 let yargs = require('yargs')
 import startCommand from './command/start'
 let argv = yargs
-    .command('start', '展现列表', {
+    .command('start', '开始', {
         pattern: {
             alias: ['p'],
             default: '**/*.*',
