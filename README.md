@@ -4,7 +4,7 @@
 
 ## 安装
 ```
-npm i -g renamex
+npm i -g renamex-cli
 ```    
 
 > 描述
