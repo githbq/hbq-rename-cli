@@ -1,0 +1,39 @@
+{
+    "name": "renamex-cli",
+    "version": "0.1.0",
+    "description": "rename cli  一个好用的重命名 命令行工具 默认已经忽略 node_modules文件夹",
+    "bin": {
+        "renamex": "./build/index.js"
+    },
+    "scripts": {
+        "start": "node run",
+        "tsc": "tsc",
+        "tsc:w": "tsc -w",
+        "publish": "tsc && npm publish"
+    },
+    "author": "hubiqing",
+    "license": "MIT",
+    "bugs": {
+        "url": "git@github.com:githbq/hbq-rename-cli.git"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:githbq/hbq-rename-cli.git"
+    },
+    "homepage": "git@github.com:githbq/hbq-rename-cli.git#readme",
+    "dependencies": {
+        "chalk": "^1.1.3",
+        "io-helper": "^0.0.8",
+        "lodash": "^4.17.4",
+        "promise-path": "^1.2.3",
+        "prompt-promise": "^1.0.3",
+        "yargs": "^7.1.0",
+        "globby": "^6.1.0"
+    },
+    "devDependencies": {
+        "@types/node": "^6.0.48",
+        "ts-node": "^3.0.2",
+        "tslint": "^5.1.0",
+        "typescript": "^2.3.2"
+    }
+}
