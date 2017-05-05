@@ -35,7 +35,7 @@ export default {
             }
             //测试模式不执行
             if (data.test == 'no') {
-                return prompt('确认开始执行重命名操作(y/n)?')
+                return prompt('\n 确认开始执行重命名操作(y/n)?')
             }
         }).
             then((ensure = '') => {
@@ -46,12 +46,12 @@ export default {
                     const promises = params.map(n => {
                         return ioHelper.renameAsync.apply(null, n)
                     })
-                    console.log(`正在重命名${promises.length}个文件`)
+                    console.log(`\n 正在重命名${promises.length}个文件 \n`)
                     return Promise.all(promises)
                 }
             })
             .then(() => {
-                console.log(`完成!`);
+                console.log(`\n 完成!\n `);
                 exit()
             });
 
