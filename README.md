@@ -22,4 +22,7 @@ renamex start -p **/*.js -r "lalala[name][ext]" -t no
     1. full 文件名的全名, xxxx/yyy.js =>  yyy.js
     2. name 文件名, xxxx/yyyy.js  => yyyy
     3. ext 后缀名 含. , xxxx/yyyy.js => .js
+
+## 更新记录
+- 2017-5-5 8:30:v1.0.4 完全typescript化
  

@@ -7,10 +7,11 @@
         "type": "node",
         "request": "launch",
         "name": "启动程序",
-        "program": "${workspaceRoot}/ts/index.ts",
+        "protocol": "inspector",
+        "program": "${workspaceRoot}/src/index.ts",
         "cwd": "${workspaceRoot}",
         "outFiles": ["${workspaceRoot}/build/**/*.js"],
         "sourceMaps": true
-    //   ,"preLaunchTask": "tsc"
+            // ,"preLaunchTask": "tsc"
     }]
 }
