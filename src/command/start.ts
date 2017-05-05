@@ -28,6 +28,7 @@ export default {
                 let newFilename = this.replaceWithData(data.replacePattern, pathData)
                 params.push([dirname, pathData.full, newFilename])
             }
+            console.log(`\n共匹配到${count}个文件\n`)
         }).then(() => {
             if (params.length == 0) {
                 console.log(`\n ***未匹配到文件*** \n`)
@@ -36,11 +37,10 @@ export default {
             //测试模式不执行
             if (data.test == 'no') {
                 return confirm('\n 确认开始执行重命名操作')
+            } else {
+                console.log(' \n 提示: 添加参数 [-t no]  才会执行文件操作\n')
             }
         }).
-            then((ensure = '') => {
-                return ensure.indexOf('y') != -1
-            }).
             then((ok) => {
                 if (ok) {
                     const promises = params.map(n => {
