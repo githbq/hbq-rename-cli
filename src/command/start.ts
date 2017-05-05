@@ -3,7 +3,7 @@ import * as pathTool from 'path'
 import * as globby from 'globby'
 import * as   ioHelper from 'io-helper'
 import common from './common'
-const { exit, prompt } = common;
+const { exit, prompt, confirm } = common;
 
 function joinArr(arr, prefix) {
     return arr.map((n) => {
@@ -35,7 +35,7 @@ export default {
             }
             //测试模式不执行
             if (data.test == 'no') {
-                return prompt('\n 确认开始执行重命名操作(y/n)?')
+                return confirm('\n 确认开始执行重命名操作')
             }
         }).
             then((ensure = '') => {

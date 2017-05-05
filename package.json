@@ -1,6 +1,6 @@
 {
     "name": "renamex-cli",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "rename cli  一个好用的重命名 命令行工具 默认已经忽略 node_modules文件夹",
     "bin": {
         "renamex": "./build/index.js"
@@ -33,7 +33,7 @@
         "io-helper": "^0.0.8",
         "lodash": "^4.17.4",
         "promise-path": "^1.2.3",
-        "prompt-promise": "^1.0.3",
+        "prompt-promise2": "^0.0.2",
         "tslib": "^1.7.0",
         "yargs": "^7.1.0"
     },

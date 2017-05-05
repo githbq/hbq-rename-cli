@@ -1,5 +1,5 @@
 const ioHelper = require('io-helper')
-const prompt = require('prompt-promise')
+const { prompt } = require('prompt-promise2')
 const chalk = require('chalk')
 const _ = require('lodash')
 /**
@@ -17,5 +17,9 @@ export default {
     },
     exit() {
         process.exit()
-    }
+    },
+    async confirm(describe) {
+        let result = await prompt(`${describe}(y/n):`)
+        return result.toLowerCase().indexOf('y') != -1
+    },
 }
