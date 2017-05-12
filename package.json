@@ -1,10 +1,8 @@
 {
     "name": "renamex-cli",
-    "version": "1.0.7",
+    "version": "1.0.8",
     "description": "rename cli  一个好用的重命名 命令行工具 默认已经忽略 node_modules文件夹",
-    "bin": {
-        "renamex": "./build/index.js"
-    },
+    "bin": {"renamex": "./build/index.js"},
     "scripts": {
         "start": "node run",
         "clear": "rimraf build",
@@ -12,11 +10,7 @@
         "tsc:w": "npm run clear && tsc -w",
         "p": "npm run tsc && npm publish"
     },
-    "keywords": [
-        "typescript",
-        "rename",
-        "cli"
-    ],
+    "keywords": ["typescript", "rename", "cli"],
     "author": "hubiqing",
     "license": "MIT",
     "bugs": {
