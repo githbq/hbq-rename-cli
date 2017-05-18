@@ -1,6 +1,6 @@
 {
     "name": "renamex-cli",
-    "version": "1.0.9",
+    "version": "1.0.10",
     "description": "rename cli  一个好用的重命名 命令行工具 默认已经忽略 node_modules文件夹",
     "bin": {"renamex": "./build/index.js"},
     "scripts": {
