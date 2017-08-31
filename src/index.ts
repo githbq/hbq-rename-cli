@@ -1,5 +1,3 @@
-#!/usr/bin/env node --harmony
-
 let yargs = require('yargs')
 import startCommand from './command/start'
 let argv = yargs

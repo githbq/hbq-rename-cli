@@ -12,16 +12,15 @@
         "noEmitHelpers": true,
         "importHelpers": true,
         "strictNullChecks": false,
+        "allowUnreachableCode": true,
         "lib": [
-            "es6"
+            "es2017"
         ],
         "typeRoots": [
             "node_modules/@types"
         ],
         "types": [
-            "node",
-            "chai",
-            "mocha"
+            "node"
         ],
         "outDir": "./build",
         "rootDir": "./src"
@@ -29,7 +28,8 @@
     "exclude": [
         "node_modules",
         "build",
-        "**/*.test.ts"
+        "**/*.test.ts",
+        "temp"
     ],
     "compileOnSave": false,
     "buildOnSave": false
